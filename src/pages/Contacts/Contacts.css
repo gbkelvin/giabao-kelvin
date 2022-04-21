@@ -1,0 +1,377 @@
+.contacts_frame {
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    width           : 100%;
+    position        : relative;
+}
+
+.contacts__header {
+    width           : 100%;
+    height          : 250px;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    flex-direction  : column;
+    border-bottom   : 1px solid var(--font-primary-color);
+    font-size       : var(--fHeader-over);
+    font-weight     : var(--fWeight-web-header);
+}
+
+.contacts__body {
+    width           : 80%;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : center;
+}
+
+.contacts__customer-info {
+    width           : 100%;
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : stretch;
+}
+
+.contact-customer__caption {
+    width           : 100%;
+    height          : 100px;
+    padding         : 10px;
+    display         : flex;
+    justify-content : start;
+    align-items     : center;
+    font-size       : var(--fCaption-over);
+    font-weight     : var(--fWeight-web-caption);
+}
+
+.contacts__input-info {
+    padding         : 10px;
+    gap             : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    width           : 100%;
+    max-width       : 600px;
+}
+
+.info-input__title {
+    justify-content : flex-start;
+    align-items     : center;
+    font-size       : var(--fTitle-over);
+    font-weight     : var(--fWeight-web-caption);
+}
+
+.input__form {
+    height          : 60px;
+    width           : 100%;
+    align-items     : center;
+    justify-content : center;
+    position        : relative;
+    display         : flex;
+    padding         : 5px;
+    background-color: var(--quaternary-color);
+}
+
+.input__field {
+    width           : 100%;
+    height          : 100%;
+    border          : none;
+    outline         : none;
+    color           : var(--primary-color);
+    background-color: transparent;
+    font-size       : var(--fBody-over);
+}
+
+.input__field::placeholder {
+    font-size       : var(--fBody-over);
+    font-style      : italic;
+    color           : var(--secondary-color);
+}
+
+.input__error { border: 1px solid red; }
+
+.error__sentence {
+    font-size   : var(--fBody-over);
+    color       : red;
+    font-style  : italic;
+}
+
+.text-area { height: 200px; }
+
+.input-area { resize: none; }
+
+.input-area::placeholder {
+    font-family: var(--main-font);
+}
+
+.contacts__company {
+    width           : 50%;
+    padding         : 10px;
+}
+
+.contacts__customer {
+    width           : 50%;
+    padding         : 10px;
+}
+
+.contact-company__info {
+    width           : 100%;
+    height          : 100%;
+    gap             : 10px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+}
+
+.logo__image {
+    width       : 200px;
+    height      : 200px;
+    object-fit  : contain;
+}
+
+.info__body {
+    width           : 80%; 
+    display         : flex;
+}
+
+.info-body_logo {
+    width           : auto;
+    height          : auto;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+.info-body_name {
+    justify-content : center;
+    align-items     : center;
+    font-size       : var(--fHeader-over);
+    font-weight     : var(--fWeight-web-header);
+    padding         : 0px;
+}
+
+.info-body_specialize {
+    justify-content : center;
+    align-items     : center;
+    font-size       : var(--fCaption-over);
+    font-weight     : var(--fWeight-web-caption);
+    padding         : 0px;
+}
+
+.info-body_detail {
+    align-items     : stretch;
+    font-size       : var(--fTitle-over);
+    font-weight     : var(--fWeight-web-caption);
+}
+
+.company-info_header {
+    width       : 30%;
+    height      : 100%;
+}
+.company-info_body {
+    width       : 70%;
+    height      : 100%;
+    text-align  : right;
+}
+
+.contacts__title {
+    height          : 100px;
+    width           : 40vw;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+.btn__CustomerSend {
+    height          : 50px;
+    width           : 100%;
+    align-items     : center;
+    justify-content : center;
+    position        : relative;
+    display         : flex;
+    padding         : 10px;
+    background-color: var(--quaternary-color);
+    border          : none;
+    color           : var(--primary-color);
+    font-size       : var(--fTitle-over);
+    font-weight     : var(--fWeight-web-caption);
+    filter          : brightness(70%);
+}
+
+.btn__CustomerSend:hover {
+    opacity         : 1;
+    filter          : brightness(100%);
+}
+
+.alert__frame {
+    width           : 100%;
+    position        : absolute;
+    bottom          : 0px;
+    display         : flex;
+    align-items     : center;
+    justify-content : end;
+}
+
+@media screen and (max-width: 1600px) {
+    .contacts__header { font-size: var(--fHeader-1500); }
+    .contacts__body {width: 100%;}
+    .contact-customer__caption { font-size: var(--fCaption-1500); }
+    .info-input__title { font-size: var(--fTitle-1500); }
+    .input__field { font-size: var(--fBody-1500);}
+    .input__field::placeholder { font-size: var(--fBody-1500); }
+    .error__sentence { font-size: var(--fBody-1500); }
+
+    .logo__image { width: 150px; height: 150px; }
+    .info-body_name { font-size: var(--fHeader-1500); }
+    .info-body_specialize { font-size: var(--fCaption-1500); }
+    .info-body_detail { font-size: var(--fTitle-1500); }
+
+    .btn__CustomerSend { font-size: var(--fTitle-1500); }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .contacts__header { 
+        font-size: var(--fHeader-1050);
+        height   : 200px; 
+    }
+
+    .contact-customer__caption { 
+        font-size   : var(--fCaption-1050); 
+        height      : 60px;
+    }
+    .info-input__title { font-size: var(--fTitle-1050); }
+    .input__form { height: 40px; }
+    .input__field { font-size: var(--fBody-1050);}
+    .input__field::placeholder { font-size: var(--fBody-1050); }
+    .error__sentence { font-size: var(--fBody-1050); }
+
+    .logo__image { width: 100px; height: 100px; }
+    .info-body_name { font-size: var(--fHeader-1050); }
+    .info-body_specialize { font-size: var(--fCaption-1050); }
+    .info-body_detail { font-size: var(--fTitle-1050); }
+
+    .btn__CustomerSend { font-size: var(--fTitle-1050);}
+}
+
+@media screen and (max-width: 900px) {
+
+    .contacts__header { 
+        font-size   : var(--fHeader-Pad);
+        font-weight : var(--fWeight-pad-header); 
+    }
+
+    .contacts__body { flex-direction: column;}
+
+    .contacts__company,
+    .contacts__customer { width: 100%; }
+    .contact-company__info { gap: 5px; }
+    .contacts__customer-info { align-items: center; }
+    .contact-customer__caption { 
+        font-size       : var(--fCaption-Pad);
+        font-weight     : var(--fWeight-pad-caption); 
+        justify-content : center;
+    }  
+    .contacts__input-info { max-width: 400px; }
+    .info-input__title {
+        font-size   : var(--fTitle-Pad);
+        font-weight : var(--fWeight-pad-caption);
+    }
+    .input__form { height: 35px; }
+    .input__field { font-size: var(--fBody-Pad);}
+    .input__field::placeholder { font-size: var(--fBody-Pad); }
+    .error__sentence { font-size: var(--fBody-Pad); }
+
+    .info__body { max-width: 400px; width: 100%;}
+    
+    .logo__image { width: 80px; height: 80px; }
+
+    .info-body_name {
+        font-size       : var(--fHeader-Pad);
+        font-weight     : var(--fWeight-pad-header);
+    }
+    .info-body_specialize {
+        font-size       : var(--fCaption-Pad);
+        font-weight     : var(--fWeight-pad-caption);
+    }
+    .info-body_detail { 
+        font-size   : var(--fTitle-Pad); 
+        font-weight : var(--fWeight-pad-caption);
+    } 
+
+    .btn__CustomerSend { 
+        font-size   : var(--fTitle-Pad); 
+        font-weight : var(--fWeight-pad-caption);
+        height      : 40px;
+    }
+    .alert__frame { bottom: 80%; }
+}
+
+@media screen and (max-width: 600px) {
+
+    .contacts__header { 
+        font-size   : var(--fHeader-Phone);
+        font-weight : var(--fWeight-phone-header); 
+        height      : 150px; 
+    }
+
+    .contact-customer__caption { 
+        font-size   : var(--fCaption-Phone);
+        font-weight : var(--fWeight-phone-caption);
+        height      : 40px; 
+    }
+    .info-input__title {
+        font-size   : var(--fTitle-Phone);
+        font-weight : var(--fWeight-phone-caption);
+    }
+    .input__field { font-size: var(--fBody-Phone); }
+    .input__field::placeholder { font-size: var(--fBody-Phone); }
+    .error__sentence { font-size: var(--fBody-Phone); }
+
+    .logo__image { width: 50px; height: 50px; }
+    .info-body_name {
+        font-size       : var(--fHeader-Phone);
+        font-weight     : var(--fWeight-phone-header);
+    }
+    .info-body_specialize {
+        font-size       : var(--fCaption-Phone);
+        font-weight     : var(--fWeight-phone-caption);
+    }
+    .info-body_detail { 
+        font-size   : var(--fTitle-Phone);
+        font-weight : var(--fWeight-phone-caption);
+    }
+
+    .btn__CustomerSend { 
+        font-size   : var(--fTitle-Phone); 
+        font-weight : var(--fWeight-phone-caption);
+        height      : 35px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    .contacts__header { 
+        font-size   : var(--fHeader-min300);
+        height      : 100px; 
+    }
+
+    .contact-customer__caption { font-size: var(--fCaption-min300); }
+    .info-input__title { font-size: var(--fTitle-min300); }
+    .input__form { height: 25px; }
+    .input__field { font-size: var(--fBody-min300);}
+    .input__field::placeholder { font-size: var(--fBody-min300); }
+    .error__sentence { font-size: var(--fBody-min300); }
+    
+    .logo__image { width: 40px; height: 40px; }
+    .info-body_name { font-size: var(--fHeader-min300); }
+    .info-body_specialize { font-size: var(--fCaption-min300); }
+    .info-body_detail { font-size: var(--fTitle-min300); }
+
+    .btn__CustomerSend { 
+        font-size   : var(--fTitle-min300);
+        height      : 30px;
+    }
+}

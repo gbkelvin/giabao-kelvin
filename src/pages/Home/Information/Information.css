@@ -1,0 +1,126 @@
+.info-container {
+
+    display         : flex;
+    position        : relative;
+    align-items     : center;
+    justify-content : center;
+    height          : 500px;
+    width           : 100%;
+}
+
+.info-detail {
+
+    height          : 100%;
+    width           : 80%;
+    padding         : 10px;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center;
+    position        : absolute;
+    text-align      : center;
+}
+
+.info-header {
+
+    height      : 100px;
+    display     : flex;
+    align-items : center;
+    padding     : 10px;
+    color       : var(--font-primary-color);
+    font-size   : var(--fHeader-over);
+    font-weight : var(--fWeight-web-header);
+}
+
+.info-content {
+    display         : flex;
+    flex-direction  : column;
+    padding         : 10px;
+    gap             : 10px;
+    color           : var(--font-primary-color);
+    font-size       : var(--fBody-over);
+    font-style      : italic;
+}
+
+.info-link {
+    height          : 80px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    color           : var(--font-primary-color);
+    font-size       : var(--fCaption-over);
+    font-weight     : var(--fWeight-web-caption);
+    font-style      : italic;
+    text-decoration : none;
+}
+
+.info-link:hover {
+
+    text-decoration : underline;
+}
+
+.info-image {
+
+    height          : 100%;
+    width           : 100%;
+}
+
+.image {
+    height      : 100%;
+    width       : 100%;
+    object-fit  : cover;
+}
+
+@media screen and (max-width: 1600px) {
+    .info-header    { font-size: var(--fHeader-1500); }
+    .info-content   { font-size: var(--fBody-1500); }
+    .info-link      { font-size: var(--fCaption-1500); }
+}
+
+@media screen and (max-width: 900px) {
+    .info-header {
+        font-size   : var(--fHeader-Pad);
+        font-weight : var(--fWeight-pad-header);
+    }
+    .info-content {
+        font-size   : var(--fBody-Pad);
+    }
+    
+    .info-link {
+        font-size   : var(--fCaption-Pad);
+        font-weight : var(--fWeight-pad-caption);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .info-container { height: 300px; }
+
+    .info-detail { width: 100%; }
+
+    .info-header { 
+        height      : auto; 
+        font-size   : var(--fHeader-Phone);
+        font-weight : var(--fWeight-phone-header);
+    }
+
+    .info-content {
+        width       : 100%;
+        font-size   : var(--fBody-Phone);
+    }
+
+    .info-link {
+        font-size   : var(--fCaption-Phone);
+        font-weight : var(--fWeight-phone-caption);
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+
+    .info-container { height: 250px; }
+    .info-header    { font-size: var(--fHeader-min300); }
+    .info-content   { font-size: var(--fBody-min300); }
+    .info-link      { font-size: var(--fCaption-min300); }
+
+}

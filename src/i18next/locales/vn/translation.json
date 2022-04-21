@@ -1,0 +1,63 @@
+{
+    "Welcome": "chao mung ban su dung react-i18next",
+
+    "languageType" : "vn",
+
+    "nav-bar": {
+        "home"      : "Trang Chủ",
+        "aboutUs"   : "Giới thiệu",
+        "projects"  : "Dự án",
+        "services"  : "Dịch vụ",
+        "blogs"     : "Bài viết",
+        "contacts"  : "Liên Hệ"
+    },
+    "homePage" : {
+        "outStandProject"   : "Dự án nổi bật",
+        "ourService"        : "Dịch vụ của chúng tôi",
+        "newArticle"        : "Bài viết mới nhất",
+        "learnMoreInfo"     : "Xem chi tiết"
+    },
+    "footer": {
+        "company"           : "Về Công Ty",
+        "contactUs"         : "Liên hệ chúng tôi",
+        "newSletter"        : "Nhận bản tin mới",
+        "newSletterInput"   : "Vui lòng nhập email của bạn",
+        "regisEmailSuccess" : "Đăng ký bản tin thành công",
+        "regisEmailFail"    : "Email đã tồn tại, vui lòng thử lại!"
+    },
+
+    "servicesTitle" : "Tất cả các dịch vụ tại Khang Hiền",
+    "projectTitle"  : "Tất cả các dự án của Khang Hiền",
+    "blogsTitle"    : "Những bài viết nổi bật",
+    "contactTitle"  : "Thông tin liên hệ",
+    "serviceDetail" : "Chi tiết dịch vụ",
+    "aboutUsIntro"  : "Giới thiệu", 
+
+    "contactPage"  : {
+        "contactInformation": "THÔNG TIN LIÊN HỆ",
+        "contactConsultant" : "LIÊN HỆ TƯ VẤN",
+
+        "customerFullName"  : "Họ tên",
+        "cusFNameInput"     : "Vui lòng nhập tên đầy đủ của bạn",
+        "customerEmail"     : "Email",
+        "cusEmailInput"     : "Vui lòng điền địa chỉ email của bạn",
+        "CustomerPhone"     : "Điện thoại cá nhân",
+        "cusPhoneInput"     : "Vui lòng cung cấp số điện thoại của bạn tại đây",
+        "reasonSupport"     : "Bạn cần hỗ trợ về vấn đề gì?",
+        "cusSupportInput"   : "Vui lòng điền yêu cầu của bạn tại đây",
+
+        "openTime"          : "Thời gian mở cửa:",
+        "companyAddress"    : "Địa chỉ công ty:",
+        "companyEmail"      : "Email:",
+        "companyPhone"      : "Điện thoại:",
+
+        "sendButton"        : "Gửi yêu cầu",
+        "sendRequestStatus" : "Gửi yêu cầu thành công"
+    },
+
+    "errorCheckInput" : {
+        "fulNameInputCheck" : "Họ tên không được để trống",
+        "emailInputCheck"   : "Địa chỉ email không được trống",
+        "emailFormatCheck"  : "Địa chỉ email không được định dạng đúng"
+    }
+}

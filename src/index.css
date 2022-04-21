@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --main-font          : 'Roboto', sans-serif;
+
+    /* define font size layout max 1050px */
+    --fHeader-over    : 40px; /* size for header layout web */
+    --fCaption-over   : 30px;
+    --fTitle-over     : 27px;
+    --fBody-over      : 25px;
+
+    --fHeader-1500    : 30px; /* size for header layout web */
+    --fCaption-1500   : 25px;
+    --fTitle-1500     : 22px;
+    --fBody-1500      : 15px;
+
+    --fHeader-1050    : 25px; /* size for header layout web */
+    --fCaption-1050   : 20px;
+    --fTitle-1050     : 17px;
+    --fBody-1050      : 15px;
+
+    --fHeader-Pad     : 22px; /* size for header layout mobile */
+    --fCaption-Pad    : 17px;
+    --fTitle-Pad      : 14px;
+    --fBody-Pad       : 12px;
+
+    --fHeader-Phone   : 20px; /* size for header layout mobile */
+    --fCaption-Phone  : 15px;
+    --fTitle-Phone    : 12px;
+    --fBody-Phone     : 10px;
+
+    --fHeader-min300  : 17px; /* size for header layout mobile */
+    --fCaption-min300 : 12px;
+    --fTitle-min300   : 9px;
+    --fBody-min300    : 8px;
+
+    --fWeight-web-header  : 800;
+    --fWeight-web-caption : 700;
+
+    --fWeight-pad-header  : 700;
+    --fWeight-pad-caption : 600;
+
+    --fWeight-phone-header  : 600;
+    --fWeight-phone-caption : 500;
+
+    --primary-color     : #ffffff;
+    --secondary-color   : #D9D9D9;
+    --tertiary-color    : #262626;
+    --quaternary-color  : #0D0D0D;
+
+    --font-primary-color: #0D0D0D;
+
+    --shadow-bottom : 0.05rem 0.1rem 0.3rem -0.03rem #3A3E40;
+}

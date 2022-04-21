@@ -1,0 +1,64 @@
+{
+    "Welcome": "Welcome to React and react-i18next",
+
+    "languageType" : "en",
+
+    "nav-bar": {
+        "home"      : "Home",
+        "aboutUs"   : "About Us",
+        "projects"  : "Project",
+        "services"  : "Service",
+        "blogs"     : "Blog",
+        "contacts"  : "Contact"
+    },
+
+    "homePage": {
+        "outStandProject"   : "Outstanding Project",
+        "ourService"        : "Our Services",
+        "newArticle"        : "Articles",
+        "learnMoreInfo"     : "Learn more"
+    },
+
+    "footer": {
+        "company"           : "Company",
+        "contactUs"         : "Contact Us",
+        "newSletter"        : "Newsletter",
+        "newSletterInput"   : "Please enter your email address",
+        "regisEmailSuccess" : "Register Newsletter successful",
+        "regisEmailFail"    : "Email is existed, please try again!"
+    },
+
+    "servicesTitle" : "All services provided by Khang Hien",
+    "projectTitle"  : "Khang Hien's whole portfolio of projects",
+    "blogsTitle"    : "Featured articles",
+    "serviceDetail" : "Service Detail",
+    "aboutUsIntro"  : "Introduction",  
+
+    "contactPage"  : {
+        "contactInformation": "CONTACT INFORMATION",
+        "contactConsultant" : "CONTACT CONSULTANT",
+
+        "customerFullName"  : "Full Name",
+        "cusFNameInput"     : "Please enter your complete name",
+        "customerEmail"     : "Email",
+        "cusEmailInput"     : "Please enter your email address",
+        "CustomerPhone"     : "Phone Number",
+        "cusPhoneInput"     : "Please provide your phone number here",
+        "reasonSupport"     : "What exactly do you want assistance with?",
+        "cusSupportInput"   : "Please enter the information you want assistance with",
+
+        "openTime"          : "Open Time:",
+        "companyAddress"    : "Address:",
+        "companyEmail"      : "Email:",
+        "companyPhone"      : "Phone:",
+
+        "sendButton"        : "Send Request",
+        "sendRequestStatus" : "Send request successful"
+    },
+
+    "errorCheckInput" : {
+        "fulNameInputCheck" : "Full Name is not empty",
+        "emailInputCheck"   : "The email address is not empty",
+        "emailFormatCheck"  : "The email address is not properly formatted"
+    }
+}
