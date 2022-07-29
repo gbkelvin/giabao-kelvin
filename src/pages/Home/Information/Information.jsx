@@ -10,14 +10,25 @@ const Information = () => {
   const { t, i18n } = useTranslation("translation");
   const languageTypeValue = useContext(LanguageContext);
 
-  const [companyInfo, setCompanyInfo] = useState({});
-  const [companyIntro, setCompanyIntro] = useState([]);
+  const [introduction, setIntroduction] = useState({});
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    FB_SERVICES.getCompanyInformation(languageTypeValue).then((information) => {
-      setCompanyInfo(information);
-      setCompanyIntro(information.companyIntroduction);
+    FB_SERVICES.getIntroductionDocument().then((introduction) => {
+      let tempIntro = {};
+      tempIntro.id = introduction.id;
+      tempIntro.intro_image = introduction.intro_image;
+      switch (languageTypeValue) {
+        case "vn":
+          tempIntro.intro_content = introduction.vn_intro;
+          break;
+        case "en":
+          tempIntro.intro_content = introduction.en_intro;
+          break;
+        default:
+          break;
+      }
+      setIntroduction(tempIntro);
     });
   }, [languageTypeValue]);
 
@@ -25,47 +36,39 @@ const Information = () => {
     <div className="info-container">
       <div className="info-frame">
         <div className="info-left__box">
-          <span className="info-about">
-            {t("nav-bar.aboutUs")}</span>
+          <span className="info-about">{t("nav-bar.aboutUs")}</span>
           <span className="info-header">
             <RiDoubleQuotesL className="double-quotes__icon" />
             <span className="info-header__font">
-              We are innovative and forward-thinking
+              {introduction.intro_content.intro_title}
             </span>
             <RiDoubleQuotesR className="double-quotes__icon" />
           </span>
           <span className="info-content">
-            We have identified the need for truly unique, but durable and
-            sustainable flooring. There are endless possibilities of colours,
-            laying pattern, borders and even motifs or logos, which can be
-            incorporated into your floor. We can provide an unrivalled choice of
-            the highest quality and stylish flooring for both commercial and
-            domestic settings, offering up to an lifetime guarantee.
+            {introduction.intro_content.intro_description}
           </span>
 
           <div className="link-button__group">
             <Link className="link-about__button" to="/">
-              About
+              {t("nav-bar.aboutUs")}
             </Link>
 
             <Link className="link-about__button" to="/">
-              Sustainability
+              {t("sustainability")}
             </Link>
           </div>
         </div>
 
         <div className="info-right__box">
           <div className="background-box" />
-          <img
-            alt=""
-            className="info-image"
-            src={require("../../../assets/InfoBackground.jpg")}
-          />
+          <img alt="" className="info-image" src={introduction.intro_image} />
         </div>
       </div>
       <div className="info-bottom__box">
         <span className="line-style" />
-        <span className="info-footer__content">tailored flooring to suit</span>
+        <span className="info-footer__content">
+          {introduction.intro_content.intro_footer}
+        </span>
         <span className="line-style" />
       </div>
     </div>

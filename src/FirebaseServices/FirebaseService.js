@@ -14,17 +14,11 @@ export const getVideoDocument = async () => {
     return getVideoList;
 }
 
-export const getSliderImagesByID = async (renderType) => {
-    console.log("--Get Slider Image from Firestore--");
-    const sliderImageDocs = await getDocs(FB_COLLECTION.SLIDER_COLLECTION);
-    const sliderImageData = sliderImageDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
-    const listImageByID = sliderImageData.find(item => item.id === 'SIDOC001');
-    
-    switch(renderType) {
-        case 'web'   : return listImageByID.webImage;
-        case 'mobile': return listImageByID.mobileImage;
-        default: ;break;
-    }
+export const getIntroductionDocument = async () => {
+    console.log(">--Get introduction from Firestore-->");
+    const getIntroDocs = await getDocs(FB_COLLECTION.INTRODUCTION_COLLECTION);
+    const getIntroList = getIntroDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
+    return getIntroList[0];
 }
 
 export const getCompanyInformation = async (langType) => {
