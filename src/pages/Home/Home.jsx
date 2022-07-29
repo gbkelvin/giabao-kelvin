@@ -1,5 +1,5 @@
-import React                from 'react'
-import Slider               from '../../components/SliderComponent/Slider';
+import React                from 'react';
+import VideoComponent       from '../../components/VideoComponent/VideoComponent';
 import Information          from './Information/Information';
 import Outstand             from './Outstand/Outstand';
 import OurService           from './OurServices/OurService';
@@ -8,28 +8,27 @@ import Layout               from '../../components/LayoutComponent/Layout';
 import InnerHomeFrame       from '../../components/LayoutComponent/customFrame/InnerHomeFrame';
 import { useTranslation }   from 'react-i18next';
 import './Home.css';
+
 const Home = () => {
  
   const {t, i18n} = useTranslation("translation");
 
   return (
     <div className='home__container'>
-      <Slider/>
+      <VideoComponent/>
       <Information/>
-      <Layout>
-        <InnerHomeFrame 
+        {/* <InnerHomeFrame 
           componentTitle={t("homePage.outStandProject")}>
           <Outstand/>
-        </InnerHomeFrame>
-        <InnerHomeFrame
+        </InnerHomeFrame> */}
+        {/* <InnerHomeFrame
           componentTitle={t("homePage.ourService")}>
           <OurService/>
-        </InnerHomeFrame>
-        <InnerHomeFrame
+        </InnerHomeFrame> */}
+        {/* <InnerHomeFrame
           componentTitle={t("homePage.newArticle")}>
           <NewArticles/>
-        </InnerHomeFrame>
-      </Layout>
+        </InnerHomeFrame> */}
     </div>
   )
 }

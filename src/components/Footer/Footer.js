@@ -87,7 +87,7 @@ const Footer = () => {
                 <div className='company__logo'>
                     <img
                         alt=''
-                        src={require('../../assets/logo/logo-khanghien.png')}
+                        src={require('../../assets/logo/logoKH.png')}
                         className='company-logo__img'/>
                 </div>
                 <div className='company__name-box'>

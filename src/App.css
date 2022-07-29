@@ -7,7 +7,7 @@
 }
 
 body {
-    background      : transparent;
+    position        : relative;
     overflow-x      : hidden;
     font-family     : var(--main-font);
 }

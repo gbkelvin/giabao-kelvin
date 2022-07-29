@@ -1,10 +1,11 @@
-.max-width-layout__container {
+.layout__container {
     display         : flex;
-    width           : 100%;
-    align-items     : center;
-    flex-direction  : column;
     justify-content : center;
-    max-width       : 2000px;
+    align-items     : center;
+    width           : auto;
+    height          : auto;
+    flex-direction  : column;
+    position        : relative;
 }
 
 .inner-home__layout {
@@ -44,10 +45,9 @@
     max-height      : 750px;
 }
 
-@media screen and (max-width: 1600px) { 
 
-    .inner-header  { font-size: var(--fHeader-1500); }
-}
+/* 
+
 
 @media screen and (max-width: 1200px) { 
 
@@ -70,6 +70,4 @@
     }
 }
 
-@media screen and (max-width: 300px) { 
-    .inner-header  { font-size: var(--fHeader-min300); }
-}
+ */

@@ -1,0 +1,106 @@
+[debug] [2022-07-12T01:35:28.566Z] ----------------------------------------------------------------------
+[debug] [2022-07-12T01:35:28.567Z] Command:       /usr/local/bin/firebase /Users/kelvin/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy --only hosting
+[debug] [2022-07-12T01:35:28.567Z] CLI Version:   11.0.1
+[debug] [2022-07-12T01:35:28.567Z] Platform:      darwin
+[debug] [2022-07-12T01:35:28.567Z] Node Version:  v16.15.0
+[debug] [2022-07-12T01:35:28.570Z] Time:          Tue Jul 12 2022 08:35:28 GMT+0700 (Indochina Time)
+[debug] [2022-07-12T01:35:28.570Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-12T01:35:28.573Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-07-12T01:35:28.663Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-12T01:35:28.664Z] > authorizing via signed-in user (bao.dolehoanggia@gmail.com)
+[debug] [2022-07-12T01:35:28.665Z] [iam] checking project interior-web-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-07-12T01:35:28.666Z] > refreshing access token with scopes: []
+[debug] [2022-07-12T01:35:28.666Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-07-12T01:35:28.900Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 12 Jul 2022 01:35:28 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-07-12T01:35:28.953Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/interior-web-app:testIamPermissions [none]
+[debug] [2022-07-12T01:35:28.954Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/interior-web-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-12T01:35:29.222Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-07-12T01:35:29.224Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-07-12T01:35:30.193Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/interior-web-app:testIamPermissions 200
+[debug] [2022-07-12T01:35:30.195Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/interior-web-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-12T01:35:30.197Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/interior-web-app [none]
+[debug] [2022-07-12T01:35:30.750Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/interior-web-app 200
+[debug] [2022-07-12T01:35:30.753Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/interior-web-app {"projectId":"interior-web-app","projectNumber":"240119286170","displayName":"interior-web-app","name":"projects/interior-web-app","resources":{"hostingSite":"interior-web-app","realtimeDatabaseInstance":"interior-web-app-default-rtdb","storageBucket":"interior-web-app.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'interior-web-app'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-07-12T01:35:30.762Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/interior-web-app [none]
+[debug] [2022-07-12T01:35:31.174Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/interior-web-app 200
+[debug] [2022-07-12T01:35:31.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/interior-web-app {"projectId":"interior-web-app","projectNumber":"240119286170","displayName":"interior-web-app","name":"projects/interior-web-app","resources":{"hostingSite":"interior-web-app","realtimeDatabaseInstance":"interior-web-app-default-rtdb","storageBucket":"interior-web-app.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE"}
+[debug] [2022-07-12T01:35:31.179Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions [none]
+[debug] [2022-07-12T01:35:31.179Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-12T01:35:32.739Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions 200
+[debug] [2022-07-12T01:35:32.739Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions {"name":"projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5","status":"CREATED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[interior-web-app]: beginning deploy... 
+[info] i  hosting[interior-web-app]: found 12 files in build 
+[debug] [2022-07-12T01:35:32.764Z] [hosting] uploading with 200 concurrency
+[debug] [2022-07-12T01:35:33.058Z] [hosting] hash cache [YnVpbGQ] stored for 12 files
+[debug] [2022-07-12T01:35:33.058Z] [hosting][hash queue][FINAL] {"max":281,"min":15,"avg":43.666666666666664,"active":0,"complete":12,"success":12,"errored":0,"retried":0,"total":12,"elapsed":291}
+[debug] [2022-07-12T01:35:33.059Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5:populateFiles [none]
+[debug] [2022-07-12T01:35:33.059Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5:populateFiles {"files":{"/asset-manifest.json":"6ae5244fe0bbe4fdd351da010ca5aa3dfeaf628c1393f5080af4b529461a4ec2","/index.html":"d4948c859b63824d9de7d3879e51d25bac0a3cb741c5a6b7e23e199b7e0f918d","/manifest.json":"6aaf3d87dd9bb1e96f9c691c50d0ed378ed98a120a76dea78291281834cd36e9","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/logoKH.png":"6b8dbe90cd271c9407b966780527d57d9300f3533ab935f805c2310878b805f4","/static/js/main.4507ee04.js.LICENSE.txt":"dc856453557dd32f0218ea7d6f618297ed62006af9044973097b98cf3b159274","/static/css/main.48c82990.css":"0a56be84fe937bc9b593603f97084d0a2739468c7d8ea925a3a6101360c8ea12","/static/css/main.48c82990.css.map":"b04a737cb3a2f13407e05504f242f969782a7276232e0ca7e2f235ae58cd57f0","/static/js/main.4507ee04.js":"893989b6c151cd68897fa425766a20944668ade790bbc64e8793d0676cdb9774","/static/media/InfoBackground.0647a410f08151b73901.jpg":"038d9bdc638c5e21bf154efd5c3a0f5991120d2c96902b30b4caa88cb52d2080","/static/js/main.4507ee04.js.map":"1a3062a90383145288f5cf17b153c33ac40dadee417fc76441be602eb5f1e9ea"}}
+[debug] [2022-07-12T01:35:34.421Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5:populateFiles 200
+[debug] [2022-07-12T01:35:34.421Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5:populateFiles {"uploadRequiredHashes":["6ae5244fe0bbe4fdd351da010ca5aa3dfeaf628c1393f5080af4b529461a4ec2","1a3062a90383145288f5cf17b153c33ac40dadee417fc76441be602eb5f1e9ea","d4948c859b63824d9de7d3879e51d25bac0a3cb741c5a6b7e23e199b7e0f918d","893989b6c151cd68897fa425766a20944668ade790bbc64e8793d0676cdb9774"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files"}
+[debug] [2022-07-12T01:35:34.427Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/6ae5244fe0bbe4fdd351da010ca5aa3dfeaf628c1393f5080af4b529461a4ec2 [none]
+[debug] [2022-07-12T01:35:34.427Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/6ae5244fe0bbe4fdd351da010ca5aa3dfeaf628c1393f5080af4b529461a4ec2 [stream]
+[debug] [2022-07-12T01:35:34.429Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/1a3062a90383145288f5cf17b153c33ac40dadee417fc76441be602eb5f1e9ea [none]
+[debug] [2022-07-12T01:35:34.429Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/1a3062a90383145288f5cf17b153c33ac40dadee417fc76441be602eb5f1e9ea [stream]
+[debug] [2022-07-12T01:35:34.431Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/d4948c859b63824d9de7d3879e51d25bac0a3cb741c5a6b7e23e199b7e0f918d [none]
+[debug] [2022-07-12T01:35:34.431Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/d4948c859b63824d9de7d3879e51d25bac0a3cb741c5a6b7e23e199b7e0f918d [stream]
+[debug] [2022-07-12T01:35:34.433Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/893989b6c151cd68897fa425766a20944668ade790bbc64e8793d0676cdb9774 [none]
+[debug] [2022-07-12T01:35:34.433Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/893989b6c151cd68897fa425766a20944668ade790bbc64e8793d0676cdb9774 [stream]
+[debug] [2022-07-12T01:35:34.436Z] [hosting][populate queue][FINAL] {"max":1371,"min":1371,"avg":1371,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1380}
+[debug] [2022-07-12T01:35:34.436Z] [hosting] uploads queued: 4
+[debug] [2022-07-12T01:35:35.922Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/d4948c859b63824d9de7d3879e51d25bac0a3cb741c5a6b7e23e199b7e0f918d 200
+[debug] [2022-07-12T01:35:35.923Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/d4948c859b63824d9de7d3879e51d25bac0a3cb741c5a6b7e23e199b7e0f918d [stream]
+[debug] [2022-07-12T01:35:36.467Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/6ae5244fe0bbe4fdd351da010ca5aa3dfeaf628c1393f5080af4b529461a4ec2 200
+[debug] [2022-07-12T01:35:36.467Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/6ae5244fe0bbe4fdd351da010ca5aa3dfeaf628c1393f5080af4b529461a4ec2 [stream]
+[debug] [2022-07-12T01:35:36.470Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/893989b6c151cd68897fa425766a20944668ade790bbc64e8793d0676cdb9774 200
+[debug] [2022-07-12T01:35:36.470Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/893989b6c151cd68897fa425766a20944668ade790bbc64e8793d0676cdb9774 [stream]
+[debug] [2022-07-12T01:35:36.484Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/1a3062a90383145288f5cf17b153c33ac40dadee417fc76441be602eb5f1e9ea 200
+[debug] [2022-07-12T01:35:36.484Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/interior-web-app/versions/bde223f1613ed4c5/files/1a3062a90383145288f5cf17b153c33ac40dadee417fc76441be602eb5f1e9ea [stream]
+[debug] [2022-07-12T01:35:36.484Z] [hosting][upload queue][FINAL] {"max":2060,"min":1499,"avg":1912.25,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":2062}
+[info] ✔  hosting[interior-web-app]: file upload complete 
+[debug] [2022-07-12T01:35:36.487Z] [hosting] deploy completed after 3746ms
+[debug] [2022-07-12T01:35:36.494Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "interior-web-app"
+    },
+    "site": "interior-web-app",
+    "version": "projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5"
+  }
+]
+[info] i  hosting[interior-web-app]: finalizing version... 
+[debug] [2022-07-12T01:35:36.495Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5 updateMask=status%2Cconfig
+[debug] [2022-07-12T01:35:36.496Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-07-12T01:35:37.819Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5 200
+[debug] [2022-07-12T01:35:37.822Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5 {"name":"projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-07-12T01:35:32.420093Z","createUser":{"email":"bao.dolehoanggia@gmail.com"},"finalizeTime":"2022-07-12T01:35:37.653175Z","finalizeUser":{"email":"bao.dolehoanggia@gmail.com"}}
+[debug] [2022-07-12T01:35:37.822Z] [hosting] finalized version for interior-web-app:[object Object]
+[info] ✔  hosting[interior-web-app]: version finalized 
+[info] i  hosting[interior-web-app]: releasing new version... 
+[debug] [2022-07-12T01:35:37.826Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/releases versionName=projects%2F240119286170%2Fsites%2Finterior-web-app%2Fversions%2Fbde223f1613ed4c5
+[debug] [2022-07-12T01:35:37.826Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/releases {"message":null}
+[debug] [2022-07-12T01:35:39.133Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/releases 200
+[debug] [2022-07-12T01:35:39.133Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/240119286170/sites/interior-web-app/releases {"name":"projects/240119286170/sites/interior-web-app/releases/1657589738444786","version":{"name":"projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-07-12T01:35:32.420093Z","createUser":{"email":"bao.dolehoanggia@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucrjXTxT3C_RrXZf2U-rjbAmm26kVngQ9t2alOzc"},"finalizeTime":"2022-07-12T01:35:37.653175Z","finalizeUser":{"email":"bao.dolehoanggia@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucrjXTxT3C_RrXZf2U-rjbAmm26kVngQ9t2alOzc"}},"type":"DEPLOY","releaseTime":"2022-07-12T01:35:38.444786481Z","releaseUser":{"email":"bao.dolehoanggia@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucrjXTxT3C_RrXZf2U-rjbAmm26kVngQ9t2alOzc"}}
+[debug] [2022-07-12T01:35:39.134Z] [hosting] release: {"name":"projects/240119286170/sites/interior-web-app/releases/1657589738444786","version":{"name":"projects/240119286170/sites/interior-web-app/versions/bde223f1613ed4c5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-07-12T01:35:32.420093Z","createUser":{"email":"bao.dolehoanggia@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucrjXTxT3C_RrXZf2U-rjbAmm26kVngQ9t2alOzc"},"finalizeTime":"2022-07-12T01:35:37.653175Z","finalizeUser":{"email":"bao.dolehoanggia@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucrjXTxT3C_RrXZf2U-rjbAmm26kVngQ9t2alOzc"}},"type":"DEPLOY","releaseTime":"2022-07-12T01:35:38.444786481Z","releaseUser":{"email":"bao.dolehoanggia@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a-/AFdZucrjXTxT3C_RrXZf2U-rjbAmm26kVngQ9t2alOzc"}}
+[info] ✔  hosting[interior-web-app]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/interior-web-app/overview
+[info] Hosting URL: https://interior-web-app.web.app

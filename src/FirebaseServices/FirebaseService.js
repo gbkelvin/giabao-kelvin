@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import { 
     collection, 
     doc, 
@@ -5,6 +6,13 @@ import {
     setDoc }                from "firebase/firestore";
 import { database }         from "./FirebaseConfig";
 import * as FB_COLLECTION   from "./firebaseContext";
+
+export const getVideoDocument = async () => {
+    console.log(">--Get video background from Firestore-->");
+    const getVideoDocs = await getDocs(FB_COLLECTION.VIDEO_COLLECTION);
+    const getVideoList = getVideoDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
+    return getVideoList;
+}
 
 export const getSliderImagesByID = async (renderType) => {
     console.log("--Get Slider Image from Firestore--");

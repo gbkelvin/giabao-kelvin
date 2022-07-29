@@ -87,7 +87,7 @@ const Contacts = () => {
         <div className='info__body info-body_logo'>
           <img 
             alt=''
-            src={require('../../assets/logo/logo-khanghien.png')}
+            src={require('../../assets/logo/logoKH.png')}
             className='logo__image'/>
         </div>
         <div className='info__body info-body_name'>

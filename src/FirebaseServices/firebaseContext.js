@@ -9,5 +9,6 @@ export const SERVICES_COLLECTION            = collection( database, "servicesCol
 export const BLOGS_COLLECTION               = collection( database, "blogsCollection"    );
 export const ABOUT_US_COLLECTION            = collection( database, "aboutUsCollection"  );
 export const COMPANY_COLLECTION             = collection( database, "companyCollection"  );
+export const VIDEO_COLLECTION               = collection( database, "VideoCollection"    );
 
 /*Condition collection*/
