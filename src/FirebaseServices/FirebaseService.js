@@ -14,11 +14,32 @@ export const getVideoDocument = async () => {
     return getVideoList;
 }
 
-export const getIntroductionDocument = async () => {
+export const getIntroductionDocument = async (langType) => {
     console.log(">--Get introduction from Firestore-->");
     const getIntroDocs = await getDocs(FB_COLLECTION.INTRODUCTION_COLLECTION);
     const getIntroList = getIntroDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
-    return getIntroList[0];
+
+    let IntroItem = {};
+    IntroItem = IntroItem || {};
+    IntroItem.id = getIntroList[0].id;
+    IntroItem.intro_image = getIntroList[0].intro_image;
+
+    switch (langType) {
+        case "vn":
+            IntroItem.intro_title = getIntroList[0].vn_intro.intro_title;
+            IntroItem.intro_description = getIntroList[0].vn_intro.intro_description;
+            IntroItem.intro_footer = getIntroList[0].vn_intro.intro_footer;
+          break;
+        case "en":
+            IntroItem.intro_content = getIntroList[0].en_intro.intro_title;
+            IntroItem.intro_description = getIntroList[0].en_intro.intro_description;
+            IntroItem.intro_footer = getIntroList[0].en_intro.intro_footer;
+          break;
+        default:
+          break;
+    } 
+    console.log({IntroItem})
+    return IntroItem;
 }
 
 export const getCompanyInformation = async (langType) => {

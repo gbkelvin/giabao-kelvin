@@ -85,12 +85,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  width: 50%;
+  width: 40%;
   height: auto;
   padding: 1rem;
   gap: 1rem;
-  left: 5rem;
-  top: 35%;
+  left: 3rem;
+  bottom: 5rem;
   color: white;
 }
 .video-title {
@@ -106,31 +106,12 @@
   display: flex;
   align-items: center;
   justify-content: stretch;
-  max-width: 10vw;
-  min-height: 5vh;
-  padding: 1rem;
-  border: 1px solid white;
+  font-size: 1.2rem;
   cursor: pointer;
-}
-.video-learn-more__button:hover {
-  background-color: black;
-  border: none;
-  transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 950px) {
   .video-slider__title {
-    align-items: center;
-    width: 90%;
-    top: 30%;
-    left: 5%;
-  }
-  .video-title,
-  .video-description {
-    text-align: center;
-  }
-  .video-learn-more__button {
-    min-width: 150px;
-    justify-content: center;
+    width: 70%;
   }
 }

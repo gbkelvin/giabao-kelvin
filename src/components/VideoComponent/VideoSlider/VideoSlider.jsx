@@ -32,14 +32,13 @@ const VideoSlider = ({ activeIndex, videoSlider, isPlay }) => {
     }
     return (
       <div className="video-slider__title">
+         <div className="video-learn-more__button">
+          <span>{t("learnMore")}</span>
+        </div>
         <span className="video-title">{videoTitle.title_video}</span>
         <span className="video-description">
           {videoTitle.description_video}
         </span>
-
-        <div className="video-learn-more__button">
-          <span>{t("learnMore")}</span>
-        </div>
       </div>
     );
   };

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import * as FB_SERVICES from "../../../FirebaseServices/FirebaseService";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "../../../Context/LanguageContext";
-import "./Information.css";
+import "./Introduction.css";
 
-const Information = () => {
+const Introduction = () => {
   const { t, i18n } = useTranslation("translation");
   const languageTypeValue = useContext(LanguageContext);
 
@@ -14,24 +14,11 @@ const Information = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    FB_SERVICES.getIntroductionDocument().then((introduction) => {
-      let tempIntro = {};
-      tempIntro.id = introduction.id;
-      tempIntro.intro_image = introduction.intro_image;
-      switch (languageTypeValue) {
-        case "vn":
-          tempIntro.intro_content = introduction.vn_intro;
-          break;
-        case "en":
-          tempIntro.intro_content = introduction.en_intro;
-          break;
-        default:
-          break;
-      }
-      setIntroduction(tempIntro);
+    FB_SERVICES.getIntroductionDocument(languageTypeValue).then((intro) => {
+      setIntroduction(intro);
     });
   }, [languageTypeValue]);
-
+console.log({introduction});
   return (
     <div className="info-container">
       <div className="info-frame">
@@ -40,12 +27,12 @@ const Information = () => {
           <span className="info-header">
             <RiDoubleQuotesL className="double-quotes__icon" />
             <span className="info-header__font">
-              {introduction.intro_content.intro_title}
+              {introduction.intro_title}
             </span>
             <RiDoubleQuotesR className="double-quotes__icon" />
           </span>
           <span className="info-content">
-            {introduction.intro_content.intro_description}
+            {introduction.intro_description}
           </span>
 
           <div className="link-button__group">
@@ -67,7 +54,7 @@ const Information = () => {
       <div className="info-bottom__box">
         <span className="line-style" />
         <span className="info-footer__content">
-          {introduction.intro_content.intro_footer}
+          {introduction.intro_footer}
         </span>
         <span className="line-style" />
       </div>
@@ -75,4 +62,4 @@ const Information = () => {
   );
 };
 
-export default Information;
+export default Introduction;

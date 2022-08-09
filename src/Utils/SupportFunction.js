@@ -11,8 +11,7 @@ export const validationEmail = (email) => {
 };
 
 export const validateInput = (inputData) => {
-
-    if(inputData.length <= 0 || inputData === undefined || inputData === '') {
+    if(inputData === undefined || inputData === '') {
         return false;
     } else {
         return true

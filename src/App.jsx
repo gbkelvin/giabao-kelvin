@@ -52,7 +52,7 @@ export const App = () => {
             path="/blogs/:id"
             element={<ArticleDetail/>}/> */}
           </Routes>
-          {/* <Footer langType={languageType}/> */}
+          <Footer langType={languageType}/>
         </Router>
       </Layout>
     </LanguageProvider>

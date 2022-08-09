@@ -1,6 +1,6 @@
 import React                from 'react';
 import VideoComponent       from '../../components/VideoComponent/VideoComponent';
-import Information          from './Information/Information';
+import Introduction         from './Introduction/Introduction';
 import Outstand             from './Outstand/Outstand';
 import OurService           from './OurServices/OurService';
 import NewArticles          from './NewArticles/NewArticles';
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className='home__container'>
       <VideoComponent/>
-      <Information/>
+      <Introduction/>
         {/* <InnerHomeFrame 
           componentTitle={t("homePage.outStandProject")}>
           <Outstand/>
