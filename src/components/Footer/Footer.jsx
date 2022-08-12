@@ -172,19 +172,19 @@ const Footer = () => {
   const renderGroupPolicy = () => {
     return (
       <div className="footer__bottom">
-        <div className="footer-rules__box">
-          {/* <Link to='/policy' className='rules_text links_rule'>
-                        Privacy Policy
-                    </Link>
-                    <div className='rules_text horizonLine'>|</div>
-                    <Link to='/policy' className='rules_text links_rule' >
-                        Cookie Policy
-                    </Link>
-                    <div className='rules_text horizonLine'>|</div>
-                    <Link to='/policy' className='rules_text links_rule'>
-                        Terms Of Use
-                    </Link> */}
-        </div>
+        {/* <div className="footer-rules__box">
+          <Link to="/policy" className="rules_text links_rule">
+            Privacy Policy
+          </Link>
+          <div className="rules_text horizonLine">|</div>
+          <Link to="/policy" className="rules_text links_rule">
+            Cookie Policy
+          </Link>
+          <div className="rules_text horizonLine">|</div>
+          <Link to="/policy" className="rules_text links_rule">
+            Terms Of Use
+          </Link>
+        </div> */}
         <div className="footer-tag__box">
           Copyright © 2022 Khang Hien Design and Construction.
         </div>

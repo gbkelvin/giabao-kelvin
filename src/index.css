@@ -47,8 +47,9 @@
     --secondary-color   : #D9D9D9;
     --tertiary-color    : #262626;
     --quaternary-color  : #0D0D0D;
+    --gold-color        : #b8860b;
 
-    --font-primary-color: #0D0D0D;
+    --font-color: #0D0D0D;
 
     --shadow-bottom : 0.05rem 0.1rem 0.3rem -0.03rem #3A3E40;
 }

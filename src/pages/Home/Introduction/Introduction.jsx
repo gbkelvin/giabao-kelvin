@@ -18,7 +18,6 @@ const Introduction = () => {
       setIntroduction(intro);
     });
   }, [languageTypeValue]);
-console.log({introduction});
   return (
     <div className="info-container">
       <div className="info-frame">

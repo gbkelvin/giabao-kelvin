@@ -4,7 +4,7 @@
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 3rem;
+  padding: 2rem;
   position: relative;
 }
 .footer__frame {
@@ -17,6 +17,8 @@
   height: auto;
   display: flex;
   flex-direction: row;
+  padding: 1rem;
+  min-height: 250px;
 }
 .company__logo-name {
   width: 25%;
@@ -51,11 +53,11 @@
   justify-content: center;
 }
 .company__name {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .company__specialize {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -76,8 +78,8 @@
   text-align: start;
   align-items: center;
   justify-content: start;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .footer__links {
   width: 100%;
@@ -90,15 +92,16 @@
   gap: 0.5rem;
 }
 .info-links {
-  color: var(--font-primary-color);
-  font-size: 0.8rem;
-  font-weight: 300;
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 400;
   font-style: italic;
   text-decoration: none;
 }
 .info-links:hover {
   text-decoration: underline;
   transition: all 1s ease-in-out;
+  color: var(--font-color);
 }
 
 .company-info__box {
@@ -121,8 +124,8 @@
   gap: 1rem;
 }
 .info-contact__body {
-  color: var(--font-primary-color);
-  font-size: 0.8rem;
+  color: var(--font-color);
+  font-size: 1rem;
   font-weight: 300;
   font-style: italic;
   text-decoration: none;
@@ -186,7 +189,6 @@
   cursor: pointer;
   color: var(--primary-color);
   opacity: 0.7;
-  font-weight: var(--fWeight-web-header);
 }
 .newsletter-sends__icons:hover {
   opacity: 1;
@@ -199,16 +201,16 @@
 }
 .social__icons {
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
   display: none;
-  gap: 20px;
+  gap: 1rem;
 }
 .social-icon__item {
-  color: var(--font-primary-color);
-  width: var(--fHeader-over);
-  height: var(--fHeader-over);
+  color: var(--font-color);
+  width: 2rem;
+  height: 2rem;
 }
 .social-icon__item:hover {
   opacity: 1;
@@ -236,7 +238,7 @@
   gap: 10px;
 }
 .rules_text {
-  color: var(--font-primary-color);
+  color: var(--font-color);
   font-size: 1rem;
   font-style: italic;
   text-decoration: none;
@@ -251,6 +253,7 @@
 .links_rule:hover {
   opacity: 1;
   text-decoration: underline;
+  color: var(--font-color);
 }
 
 .footer-tag__box {
@@ -278,7 +281,7 @@
 
 @media screen and (max-width: 750px) {
   .footer__container {
-    padding: 10px;
+    padding: 1rem;
   }
   .footer__frame {
     display: flex;
@@ -321,7 +324,7 @@
     width: 100%;
   }
   .newsletter__body {
-    width: 300px;
+    min-width: 300px;
   }
   .alert-footer__frame {
     top: 0px;

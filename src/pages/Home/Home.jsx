@@ -17,13 +17,15 @@ const Home = () => {
     <div className='home__container'>
       <VideoComponent/>
       <Introduction/>
+      <OurService/>
         {/* <InnerHomeFrame 
           componentTitle={t("homePage.outStandProject")}>
           <Outstand/>
         </InnerHomeFrame> */}
+        
         {/* <InnerHomeFrame
           componentTitle={t("homePage.ourService")}>
-          <OurService/>
+          
         </InnerHomeFrame> */}
         {/* <InnerHomeFrame
           componentTitle={t("homePage.newArticle")}>

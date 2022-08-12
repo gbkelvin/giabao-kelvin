@@ -42,6 +42,37 @@ export const getIntroductionDocument = async (langType) => {
     return IntroItem;
 }
 
+export const getServicesDocument = async (servicesType, langType) => {
+    console.log('--Get Services Collection from Firestore--');
+    const servicesDocs = await getDocs(FB_COLLECTION.SERVICES_COLLECTION);
+    const servicesData = servicesDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
+    var servicesList = [];
+
+    for(let idx = 0; idx < servicesData.length; idx++) {
+        var serviceItem = {};
+        serviceItem.id = servicesData[idx].id;
+        serviceItem.iconService =servicesData[idx].iconService;
+        serviceItem.typeService =servicesData[idx].typeService;
+        serviceItem.urlService =servicesData[idx].urlService;
+        switch(langType) {
+            case 'vn':
+                serviceItem.serviceName = servicesData[idx].vnService.serviceName;
+                serviceItem.serviceIntro = servicesData[idx].vnService.serviceIntro;
+            ;break;
+            case 'en':
+                serviceItem.serviceName = servicesData[idx].enService.serviceName;
+                serviceItem.serviceIntro = servicesData[idx].enService.serviceIntro;
+            ;break;
+            default: 
+                serviceItem.serviceName = servicesData[idx].vnService.serviceName;
+                serviceItem.serviceIntro = servicesData[idx].vnService.serviceIntro;
+            ;break;
+        }
+        servicesList.push(serviceItem)
+    }
+    return servicesList;
+}
+
 export const getCompanyInformation = async (langType) => {
     console.log("--Get company information from Firestore--");
     const companyDocs  = await getDocs(FB_COLLECTION.COMPANY_COLLECTION);
@@ -165,34 +196,34 @@ export const getProjectByID = async (props) => {
     return projectsData.find(item => item.id === props.proDocumentID);
 }
 
-export const getServices = async (servicesType, langType) => {
-    console.log('--Get Services Collection from Firestore--');
-    const servicesDocs = await getDocs(FB_COLLECTION.SERVICES_COLLECTION);
-    const servicesData = servicesDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
+// export const getServices = async (servicesType, langType) => {
+//     console.log('--Get Services Collection from Firestore--');
+//     const servicesDocs = await getDocs(FB_COLLECTION.SERVICES_COLLECTION);
+//     const servicesData = servicesDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
 
-    for(let idx = 0; idx < servicesData.length; idx++) {
-        switch(langType) {
-            case 'vn': 
-                servicesData[idx].serName   = servicesData[idx].serName.vnSerName;
-                servicesData[idx].serIntro  = servicesData[idx].serIntro.vnSerIntro;
-            ;break;
-            case 'en': 
-                servicesData[idx].serName   = servicesData[idx].serName.enSerName;
-                servicesData[idx].serIntro  = servicesData[idx].serIntro.enSerIntro;
-            ;break;
-            default: 
-                servicesData[idx].serName   = servicesData[idx].serName.vnSerName;
-                servicesData[idx].serIntro  = servicesData[idx].serIntro.vnSerIntro;
-            ;break;
-        }
-    }
+//     for(let idx = 0; idx < servicesData.length; idx++) {
+//         switch(langType) {
+//             case 'vn': 
+//                 servicesData[idx].serName   = servicesData[idx].serName.vnSerName;
+//                 servicesData[idx].serIntro  = servicesData[idx].serIntro.vnSerIntro;
+//             ;break;
+//             case 'en': 
+//                 servicesData[idx].serName   = servicesData[idx].serName.enSerName;
+//                 servicesData[idx].serIntro  = servicesData[idx].serIntro.enSerIntro;
+//             ;break;
+//             default: 
+//                 servicesData[idx].serName   = servicesData[idx].serName.vnSerName;
+//                 servicesData[idx].serIntro  = servicesData[idx].serIntro.vnSerIntro;
+//             ;break;
+//         }
+//     }
 
-    if(servicesType === undefined || servicesType === '' || servicesType.length <= 0) {
-        return servicesData;
-    } else {
-        return servicesData.filter(item => item.serType === servicesType); 
-    }
-}
+//     if(servicesType === undefined || servicesType === '' || servicesType.length <= 0) {
+//         return servicesData;
+//     } else {
+//         return servicesData.filter(item => item.serType === servicesType); 
+//     }
+// }
 
 export const getServiceByID = async (props, langType) => {
     console.log('--Get Service Item from Firestore--');

@@ -27,10 +27,10 @@
   gap: 2rem;
 }
 .info-about {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: darkgoldenrod;
+  color: var(--gold-color);
 }
 .info-header {
   font-size: 3rem;
@@ -39,16 +39,17 @@
 }
 
 .double-quotes__icon {
-  font-size: 3rem;
+  color: var(--font-color);
 }
 
 .info-header__font {
-  font-size: 3rem;
+  color: var(--font-color);
   font-weight: 600;
 }
 
 .info-content {
-  font-size: 1.5rem;
+  color: var(--font-color);
+  font-size: 1.2rem;
   font-weight: 300;
   text-align: justify;
   max-width: 90%;
@@ -64,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid darkgoldenrod;
+  border: 1px solid var(--gold-color);
   width: auto;
   height: 5vh;
   padding: 2rem;
@@ -72,12 +73,12 @@
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
-  color: darkgoldenrod;
+  color: var(--gold-color);
 }
 
 .link-about__button:hover {
-  background-color: darkgoldenrod;
-  color: white;
+  background-color: var(--gold-color);
+  color: var(--primary-color);
   transition: all 0.5s ease-in-out;
 }
 
@@ -91,7 +92,7 @@
 }
 
 .background-box {
-  background-color: darkgoldenrod;
+  background-color: var(--gold-color);
   width: 80%;
   height: 80%;
   position: absolute;
@@ -123,14 +124,14 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  background: linear-gradient(to right, #000 50%, #fff 50%);
+  background: linear-gradient(to right, var(--font-color) 50%, var(--primary-color) 50%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .line-style {
   content: "";
-  background: darkgoldenrod;
+  background: var(--gold-color);
   height: 1px;
   width: 20vw;
 }

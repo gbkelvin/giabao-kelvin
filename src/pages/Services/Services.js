@@ -14,9 +14,9 @@ const Services = () => {
   
   const [ servicesList, setServicesList ] = useState([]);
 
-  useEffect(() => { 
-    FB_SERVICES.getServices(undefined, languageTypeValue).then(serviceItem => setServicesList(serviceItem));
-  }, [languageTypeValue]);
+  // useEffect(() => { 
+  //   FB_SERVICES.getServices(undefined, languageTypeValue).then(serviceItem => setServicesList(serviceItem));
+  // }, [languageTypeValue]);
 
   return (
     <div className='services__frame'>

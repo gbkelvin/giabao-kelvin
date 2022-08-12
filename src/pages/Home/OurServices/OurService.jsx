@@ -13,16 +13,15 @@ const OurService = () => {
     const [ outStandServices, setOutStandServices ] = useState([]);
 
     useEffect(() => { 
-        FB_SERVICES.getServices('OTP', languageTypeValue).then(outStandService => setOutStandServices(outStandService))
+        FB_SERVICES.getServicesDocument('OTP', languageTypeValue).then(outStandService => setOutStandServices(outStandService))
     }, [languageTypeValue]);
-
   return (
     <div className='our-service__container'>
     {
         outStandServices.map(
-            (itemService, index) => {
+            (itemService) => {
                 return (
-                    <CardItem key={index}>
+                    <CardItem key={itemService.id}>
                         <ServiceCard serviceItem={itemService}/>
                     </CardItem>
                 )
