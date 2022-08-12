@@ -11,6 +11,7 @@ export const COMPANY_COLLECTION             = collection( database, "companyColl
 
 export const VIDEO_COLLECTION               = collection( database, "VideoCollection"    );
 export const INTRODUCTION_COLLECTION        = collection( database, "IntroCollection"    );
-export const SERVICES_COLLECTION            = collection( database, "ServiceCollection" );
+export const SERVICES_COLLECTION            = collection( database, "ServiceCollection"  );
+export const CLIENT_COLLECTION              = collection( database, "ClientCollection"   );
 
 /*Condition collection*/

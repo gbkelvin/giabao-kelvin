@@ -1,0 +1,45 @@
+.client--container {
+  padding: 1rem;
+}
+.client--header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold-color);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.client--logo__container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.client--box {
+  width: 20rem;
+  height: 20rem;
+  padding: 0.5rem;
+}
+
+.client-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .client--logo__container {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .client--logo__container {
+    grid-template-columns: auto;
+  }
+}

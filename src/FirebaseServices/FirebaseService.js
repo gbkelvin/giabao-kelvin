@@ -37,8 +37,7 @@ export const getIntroductionDocument = async (langType) => {
           break;
         default:
           break;
-    } 
-    console.log({IntroItem})
+    }
     return IntroItem;
 }
 
@@ -71,6 +70,13 @@ export const getServicesDocument = async (servicesType, langType) => {
         servicesList.push(serviceItem)
     }
     return servicesList;
+}
+
+export const getClientDocument = async () => {
+    console.log("--Get client from Firestore--");
+    const clientDocs  = await getDocs(FB_COLLECTION.CLIENT_COLLECTION);
+    const clientData  = clientDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
+    return clientData;
 }
 
 export const getCompanyInformation = async (langType) => {

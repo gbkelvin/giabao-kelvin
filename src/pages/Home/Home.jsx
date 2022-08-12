@@ -8,6 +8,7 @@ import Layout               from '../../components/LayoutComponent/Layout';
 import InnerHomeFrame       from '../../components/LayoutComponent/customFrame/InnerHomeFrame';
 import { useTranslation }   from 'react-i18next';
 import './Home.css';
+import Client from './Client/Client';
 
 const Home = () => {
  
@@ -18,6 +19,7 @@ const Home = () => {
       <VideoComponent/>
       <Introduction/>
       <OurService/>
+      <Client/>
         {/* <InnerHomeFrame 
           componentTitle={t("homePage.outStandProject")}>
           <Outstand/>
