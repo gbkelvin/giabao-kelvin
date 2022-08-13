@@ -6,7 +6,7 @@ import {
     setDoc }                from "firebase/firestore";
 import { database }         from "./FirebaseConfig";
 import * as FB_COLLECTION   from "./firebaseContext";
-
+import { v4 as uuidv4 }     from 'uuid';
 export const getVideoDocument = async () => {
     console.log(">--Get video background from Firestore-->");
     const getVideoDocs = await getDocs(FB_COLLECTION.VIDEO_COLLECTION);
@@ -237,38 +237,38 @@ export const getServiceByID = async (props, langType) => {
     const servicesData = servicesDocs.docs.map((doc) => ({...doc.data(), id: doc.id}));
 
     var getServiceItemByLang = servicesData.find(item => item.id === props.serDocumentID);
-    var serDetailTempArr = [];
-
+    var serviceItem = serviceItem || {};
+    var genID = uuidv4().slice(0, 8);
     switch(langType) {
-        case 'vn': 
-            getServiceItemByLang.serName    = getServiceItemByLang.serName.vnSerName;
-            getServiceItemByLang.serIntro   = getServiceItemByLang.serIntro.vnSerIntro;
-            getServiceItemByLang.serContent = getServiceItemByLang.serContent.vnSerContent;
-            getServiceItemByLang.serDetail.forEach(element => {
-                serDetailTempArr.push(element.vnSerDetail)
-            });
-            getServiceItemByLang.serDetail = serDetailTempArr;
+        case 'vn':
+            serviceItem.id_service = genID;
+            serviceItem.bgr_service = getServiceItemByLang.bgrService;
+            serviceItem.img_process_service = getServiceItemByLang.imgProcessService;
+            serviceItem.service_name = getServiceItemByLang.vnService.serviceName;
+            serviceItem.service_title = getServiceItemByLang.vnService.serviceTitle;
+            serviceItem.service_detail = getServiceItemByLang.vnService.serviceItem;
+            serviceItem.service_process = getServiceItemByLang.vnService.serviceProcess;
         ;break;
-        case 'en': 
-            getServiceItemByLang.serName    = getServiceItemByLang.serName.enSerName;
-            getServiceItemByLang.serIntro   = getServiceItemByLang.serIntro.enSerIntro;
-            getServiceItemByLang.serContent = getServiceItemByLang.serContent.enSerContent;
-            getServiceItemByLang.serDetail.forEach(element => {
-                serDetailTempArr.push(element.enSerDetail)
-            });
-            getServiceItemByLang.serDetail = serDetailTempArr;
+        case 'en':
+            serviceItem.id_service = genID;
+            serviceItem.bgr_service =getServiceItemByLang.bgrService;
+            serviceItem.img_process_service =getServiceItemByLang.imgProcessService;
+            serviceItem.service_name = getServiceItemByLang.enService.serviceName;
+            serviceItem.service_title = getServiceItemByLang.enService.serviceTitle;
+            serviceItem.service_detail = getServiceItemByLang.enService.serviceItem;
+            serviceItem.service_process = getServiceItemByLang.enService.serviceProcess;
         ;break;
-        default:    
-            getServiceItemByLang.serName    = getServiceItemByLang.serName.vnSerName;
-            getServiceItemByLang.serIntro   = getServiceItemByLang.serIntro.vnSerIntro;
-            getServiceItemByLang.serContent = getServiceItemByLang.serContent.vnSerContent;
-            getServiceItemByLang.serDetail.forEach(element => {
-                serDetailTempArr.push(element.vnSerDetail)
-            });
-            getServiceItemByLang.serDetail = serDetailTempArr;
+        default:  
+            serviceItem.id_service = genID;
+            serviceItem.bgr_service =getServiceItemByLang.bgrService;
+            serviceItem.img_process_service =getServiceItemByLang.imgProcessService;
+            serviceItem.service_name = getServiceItemByLang.vnService.serviceName;
+            serviceItem.service_title = getServiceItemByLang.vnService.serviceTitle;
+            serviceItem.service_detail = getServiceItemByLang.vnService.serviceItem;
+            serviceItem.service_process = getServiceItemByLang.vnService.serviceProcess;
         ;break;
     }
-    return getServiceItemByLang;
+    return serviceItem;
 }
 
 export const getBlogs = async (blogType, langType) => {
