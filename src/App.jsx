@@ -31,28 +31,26 @@ export const App = () => {
     <LanguageProvider languagesValue={languageType}>
       <Layout>
         <Router>
-          <ScrollToTop/>
+          <ScrollToTop />
           <Navbar getLanguageType={changeLanguageValue} />
           <Routes>
             <Route exact path="/" element={<Home />} />
 
-            {/* <Route path="/about"    element={<AboutUs/>}/>
-          <Route path="/projects" element={<Projects/>}/>
-          <Route path="/services" element={<Services/>}/>
-          <Route path="/blogs"    element={<Blogs/>}/>
-          <Route path="/contacts" element={<Contacts/>}/>
-          <Route path="/sign-up"  element={<Contacts/>}/> */}
-          {/* <Route 
+            {/* <Route path="/about" element={<AboutUs />} /> */}
+            {/* <Route path="/projects" element={<Projects />} /> */}
+            <Route path="/services" element={<Services />} />
+            {/* <Route path="/blogs" element={<Blogs />} /> */}
+            {/* <Route path="/contacts" element={<Contacts />} /> */}
+            {/* <Route path="/sign-up" element={<Contacts />} /> */}
+            {/* <Route 
             path="/projects/:id"
             element={<ProjectDetail/>}/>  */}
-          <Route 
-            path="/services/:id"
-            element={<ServiceDetail/>}/>
-          {/* <Route 
+            <Route path="/services/:id" element={<ServiceDetail />} />
+            {/* <Route 
             path="/blogs/:id"
             element={<ArticleDetail/>}/> */}
           </Routes>
-          <Footer langType={languageType}/>
+          <Footer langType={languageType} />
         </Router>
       </Layout>
     </LanguageProvider>

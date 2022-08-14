@@ -50,9 +50,10 @@ export const getServicesDocument = async (servicesType, langType) => {
     for(let idx = 0; idx < servicesData.length; idx++) {
         var serviceItem = {};
         serviceItem.id = servicesData[idx].id;
-        serviceItem.iconService =servicesData[idx].iconService;
-        serviceItem.typeService =servicesData[idx].typeService;
-        serviceItem.urlService =servicesData[idx].urlService;
+        serviceItem.iconService = servicesData[idx].iconService;
+        serviceItem.typeService = servicesData[idx].typeService;
+        serviceItem.urlService = servicesData[idx].urlService;
+        serviceItem.avtService = servicesData[idx].imgProcessService;
         switch(langType) {
             case 'vn':
                 serviceItem.serviceName = servicesData[idx].vnService.serviceName;

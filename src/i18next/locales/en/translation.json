@@ -5,6 +5,8 @@
     "sustainability": "Sustainability",
     "ourClient": "Our Client",
     "ourProcess": "Our Process",
+    "discover": "Discover",
+    "scrollDown": "Scroll Down",
     "nav-bar": {
         "home": "Home",
         "aboutUs": "About Us",
@@ -27,7 +29,7 @@
         "regisEmailSuccess": "Register Newsletter successful",
         "regisEmailFail": "Email is existed, please try again!"
     },
-    "servicesTitle": "All services provided by Khang Hien",
+    "servicesTitle": "Together with our clients and partners, we shape the cities of our future",
     "projectTitle": "Khang Hien's whole portfolio of projects",
     "blogsTitle": "Featured articles",
     "serviceDetail": "Service Detail",

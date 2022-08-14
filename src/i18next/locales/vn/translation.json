@@ -5,6 +5,8 @@
     "sustainability": "Sự bền vững",
     "ourClient": "Đối tác của chúng tôi",
     "ourProcess": "Quy trình của chúng tôi",
+    "discover": "Khám phá",
+    "scrollDown": "Cuộn xuống",
     "nav-bar": {
         "home": "Trang Chủ",
         "aboutUs": "Giới thiệu",
@@ -27,7 +29,7 @@
         "regisEmailSuccess": "Đăng ký bản tin thành công",
         "regisEmailFail": "Email đã tồn tại, vui lòng thử lại!"
     },
-    "servicesTitle": "Tất cả các dịch vụ tại Khang Hiền",
+    "servicesTitle": "Cùng với khách hàng và đối tác của mình, chúng tôi định hình các thành phố trong tương lai của chúng tôi",
     "projectTitle": "Tất cả các dự án của Khang Hiền",
     "blogsTitle": "Những bài viết nổi bật",
     "contactTitle": "Thông tin liên hệ",

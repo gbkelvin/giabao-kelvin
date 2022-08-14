@@ -55,8 +55,7 @@ const Navbar = ({getLanguageType}) => {
           </Link>
           <Link 
             className='link-menu__item' 
-            // to='/services'
-            to='/'
+            to='/services'
             onClick={closeMobileMenu}>
             {t("nav-bar.services")}
           </Link>
