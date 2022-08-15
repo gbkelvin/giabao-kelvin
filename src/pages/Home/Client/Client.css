@@ -1,14 +1,15 @@
 .client--container {
   padding: 1rem;
+  background-color: var(--secondary-color);
 }
 .client--header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold-color);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-color);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .client--logo__container {
   display: grid;

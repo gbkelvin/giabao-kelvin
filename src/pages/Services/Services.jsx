@@ -8,6 +8,7 @@ import "./Services.css";
 
 const doubleDownIcon = require("../../assets/logo/double_down_arrow.png");
 const service_background = require("../../assets/logo/service-background.jpg");
+const tempAvt = require("../../assets/logo/valleys.png")
 
 const Services = () => {
   const { t, i18n } = useTranslation();
@@ -25,7 +26,7 @@ const Services = () => {
       (serviceItem) => setServicesList(serviceItem)
     );
   }, [languageTypeValue]);
-  console.log({ servicesList });
+
   return (
     <div className="services__frame">
       <div className="services__header">
@@ -54,7 +55,7 @@ const Services = () => {
             <div className="service--item__container" key={index}>
               <img
                 src={itemService.avtService}
-                classname="services__avt"
+                className="services__avt"
                 alt="services-avt"
               />
               <div className="service--item__name">

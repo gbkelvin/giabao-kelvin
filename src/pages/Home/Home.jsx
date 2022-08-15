@@ -19,6 +19,7 @@ const Home = () => {
       <VideoComponent/>
       <Introduction/>
       <OurService/>
+      <Outstand/>
       <Client/>
         {/* <InnerHomeFrame 
           componentTitle={t("homePage.outStandProject")}>
