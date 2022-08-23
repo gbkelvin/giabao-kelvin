@@ -22,23 +22,38 @@
   color: var(--font-color);
 }
 
-.outstand-project__body {
+.display__one-item {
+  display: flex;
+  justify-content: center;
+}
+
+.display__multi-item {
   display: grid;
   grid-template-columns: auto auto;
-  align-items: center;
   justify-content: space-around;
+}
+
+.outstand-project__body {
+  align-items: center;
   padding: 4rem;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1150px) {
   .outstand-project__body {
+    display: grid;
     grid-template-columns: auto;
+    gap: 2rem;
+    justify-content: center;
   }
+}
+
+@media screen and (max-width: 900px) {
   .outstand-project__header {
     justify-content: center;
+    padding: 2rem;
   }
   .outstand--title {
     font-size: 2rem;

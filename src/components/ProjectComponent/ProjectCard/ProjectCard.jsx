@@ -10,14 +10,14 @@ const ProjectCard = ({ itemProject }) => {
     <div className="card-project__container">
       <div className="card-project__item">
         <div className="card-project__avatar">
-          <img alt="" src={itemProject.proImage} className="avatar__image" />
+          <img alt="" src={itemProject.avtProject} className="avatar__image" />
         </div>
 
         <div className="card-project__info">
-          <div className="projects-info">{itemProject.proName}</div>
+          <div className="projects-info">{itemProject.nameProject}</div>
           <Link
             className="projects-links"
-            to={`/projects/${itemProject.proURL}`}
+            to={`/projects/${itemProject.urlProject}`}
             state={{ proDocumentID: itemProject.id }}
           >
             {t("discover")}

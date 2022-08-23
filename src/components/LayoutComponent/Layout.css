@@ -11,4 +11,5 @@
 .card-item__layout {
     min-height      : 350px;
     max-height      : 750px;
+    min-width       : 350px;
 }

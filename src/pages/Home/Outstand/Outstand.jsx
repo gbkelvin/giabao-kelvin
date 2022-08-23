@@ -13,20 +13,26 @@ const Outstand = () => {
   const [outStandProjects, setOutStandProjects] = useState([]);
 
   useEffect(() => {
-    FB_SERVICES.getProjects("OTP", languageTypeValue).then((outStandProject) =>
-      setOutStandProjects(outStandProject)
+    FB_SERVICES.getProjectDocument("OTP", languageTypeValue).then(
+      (outStandProject) => setOutStandProjects(outStandProject)
     );
   }, [languageTypeValue]);
-
+  console.log(outStandProjects.length);
   return (
     <div className="outstand-projects__container">
       <div className="outstand-project__header">
         <div className="outstand--title">{t("homePage.outStandProject")}</div>
       </div>
-      <div className="outstand-project__body">
-        {outStandProjects.map((outStandItem, index) => {
+      <div
+        className={
+          outStandProjects.length <= 1
+            ? "outstand-project__body display__one-item"
+            : "outstand-project__body display__multi-item"
+        }
+      >
+        {outStandProjects.map((outStandItem) => {
           return (
-            <CardItem key={index}>
+            <CardItem key={outStandItem.id}>
               <ProjectCard itemProject={outStandItem} />
             </CardItem>
           );

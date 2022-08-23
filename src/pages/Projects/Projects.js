@@ -15,9 +15,9 @@ const Projects = () => {
 
   const [projectsList, setProjectsList] = useState([]);
   
-  useEffect(() => {
-    FB_SERVICES.getProjects(undefined, languageTypeValue).then(projectItem => setProjectsList(projectItem));
-  }, [languageTypeValue])
+  // useEffect(() => {
+  //   FB_SERVICES.getProjects(undefined, languageTypeValue).then(projectItem => setProjectsList(projectItem));
+  // }, [languageTypeValue])
 
   return (
     <div className='projects__frame'>
