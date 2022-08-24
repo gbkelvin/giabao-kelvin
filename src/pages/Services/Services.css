@@ -152,7 +152,7 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 10500px) {
+@media screen and (max-width: 1050px) {
   .services__body {
     grid-template-columns: auto auto;
   }

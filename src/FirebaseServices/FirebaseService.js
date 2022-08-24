@@ -267,6 +267,7 @@ export const getProjectDocument = async (projectType, langType) => {
     projectItem.avtProject = projectsData[idx].project_avt;
     projectItem.typeProject = projectsData[idx].project_type;
     projectItem.urlProject = projectsData[idx].project_url;
+    projectItem.bgrProject = projectsData[idx].project_bgr;
     switch (langType) {
       case "vn":
         projectItem.nameProject =

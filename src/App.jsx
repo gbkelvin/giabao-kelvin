@@ -37,7 +37,7 @@ export const App = () => {
             <Route exact path="/" element={<Home />} />
 
             {/* <Route path="/about" element={<AboutUs />} /> */}
-            {/* <Route path="/projects" element={<Projects />} /> */}
+            <Route path="/projects" element={<Projects />} />
             <Route path="/services" element={<Services />} />
             {/* <Route path="/blogs" element={<Blogs />} /> */}
             {/* <Route path="/contacts" element={<Contacts />} /> */}

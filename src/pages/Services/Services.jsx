@@ -8,7 +8,6 @@ import "./Services.css";
 
 const doubleDownIcon = require("../../assets/logo/double_down_arrow.png");
 const service_background = require("../../assets/logo/service-background.jpg");
-const tempAvt = require("../../assets/logo/valleys.png")
 
 const Services = () => {
   const { t, i18n } = useTranslation();
