@@ -5,6 +5,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import "./ProjectCard.css";
 
 const ProjectCard = ({ itemProject }) => {
+  console.log({itemProject})
   const { t, i18n } = useTranslation();
   return (
     <div className="card-project__container">

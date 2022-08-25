@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useRef } from "react";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { LanguageContext } from "../../../Context/LanguageContext";
-
+import * as FB_SERVICES from "../../../FirebaseServices/FirebaseService";
 const VideoSlider = ({ activeIndex, videoSlider, isPlay }) => {
   const playVideo = useRef([]);
   const languageTypeValue = useContext(LanguageContext);
-  const {t, i18n} = useTranslation("translation");
-
+  const { t, i18n } = useTranslation("translation");
+  let navigate = useNavigate();
   if (playVideo.current[activeIndex]) {
     if (isPlay) {
       playVideo.current[activeIndex].play();
@@ -16,6 +16,15 @@ const VideoSlider = ({ activeIndex, videoSlider, isPlay }) => {
     }
   }
 
+  const onLearnMoreClick = (projectID) => {
+    FB_SERVICES.getProjectByID(projectID, languageTypeValue).then(
+      (projectItem) => {
+        navigate(`/projects/${projectItem.project_url}`, {
+          state: { proDocumentID: projectItem.id },
+        });
+      }
+    );
+  };
   useEffect(() => {}, [languageTypeValue]);
 
   const renderVideoTitle = (videoItem) => {
@@ -32,7 +41,10 @@ const VideoSlider = ({ activeIndex, videoSlider, isPlay }) => {
     }
     return (
       <div className="video-slider__title">
-         <div className="video-learn-more__button">
+        <div
+          className="video-learn-more__button"
+          onClick={() => onLearnMoreClick(videoItem.id_project)}
+        >
           <span>{t("learnMore")}</span>
         </div>
         <span className="video-title">{videoTitle.title_video}</span>

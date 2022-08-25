@@ -16,6 +16,7 @@ const VideoComponent = () => {
   const handleDotClick = (selectedIndex) => {
     setCurrent(selectedIndex);
   };
+
   const getVideoData = async () => {
     FB_SERVICES.getVideoDocument().then((videos) => setVideoList(videos));
   };

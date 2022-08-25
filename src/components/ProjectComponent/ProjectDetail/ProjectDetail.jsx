@@ -5,22 +5,19 @@ import * as FB_SERVICES from "../../../FirebaseServices/FirebaseService";
 import { LanguageContext } from "../../../Context/LanguageContext";
 import "./ProjectDetail.css";
 
-const pjItem = require("../../../assets/logo/service-background.jpg");
-const avtItem = require("../../../assets/logo/valleys.png");
-
 const ProjectDetail = () => {
   const { t, i18n } = useTranslation("translation");
 
   const languageTypeValue = useContext(LanguageContext);
 
   const detailProjectLocation = useLocation();
-  const detailProjectProps = detailProjectLocation.state;
+  const projectID = detailProjectLocation.state.proDocumentID;
 
   const [detailProject, setDetailProject] = useState([]);
   const [itemProject, setItemProject] = useState({});
 
   useEffect(() => {
-    FB_SERVICES.getProjectByID(detailProjectProps, languageTypeValue).then(
+    FB_SERVICES.getProjectByID(projectID, languageTypeValue).then(
       (projectItem) => {
         setItemProject(projectItem);
         setDetailProject(projectItem.project_item);

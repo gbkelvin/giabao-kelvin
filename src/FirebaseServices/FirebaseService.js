@@ -296,8 +296,9 @@ export const getProjectDocument = async (projectType, langType) => {
   }
 };
 
-export const getProjectByID = async (props, langType) => {
+export const getProjectByID = async (projectID, langType) => {
   console.log("--Get Projects Item from Firestore--");
+
   const projectsDocs = await getDocs(FB_COLLECTION.PROJECTS_COLLECTION);
   const projectsData = projectsDocs.docs.map((doc) => ({
     ...doc.data(),
@@ -305,10 +306,10 @@ export const getProjectByID = async (props, langType) => {
   }));
 
   const getProjectById = projectsData.find(
-    (item) => item.id === props.proDocumentID
+    (item) => item.id === projectID
   );
 
-  switch (props.langType) {
+  switch (langType) {
     case "vn":
       getProjectById.project_name = getProjectById.project_name.vn_project_name;
       getProjectById.project_description =
