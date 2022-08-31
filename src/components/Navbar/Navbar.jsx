@@ -83,8 +83,7 @@ const Navbar = ({getLanguageType}) => {
           <span className='horizon-divider'/>
           <Link 
             className='link-menu__item' 
-            // to='/contacts'
-            to='/'
+            to='/contacts'
             onClick={closeMobileMenu}>
             {t("nav-bar.contacts")}
           </Link>

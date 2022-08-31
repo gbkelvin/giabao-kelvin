@@ -19,7 +19,9 @@ import { LanguageProvider } from "./Context/LanguageContext";
 import "./i18next/i18next";
 import "./App.css";
 import Layout from "./components/LayoutComponent/Layout";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 export const App = () => {
   const [languageType, setLanguageType] = useState(i18n.language);
 
@@ -40,7 +42,7 @@ export const App = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/services" element={<Services />} />
             {/* <Route path="/blogs" element={<Blogs />} /> */}
-            {/* <Route path="/contacts" element={<Contacts />} /> */}
+            <Route path="/contacts" element={<Contacts />} />
             {/* <Route path="/sign-up" element={<Contacts />} /> */}
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="/services/:id" element={<ServiceDetail />} />

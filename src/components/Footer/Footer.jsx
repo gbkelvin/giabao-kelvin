@@ -29,10 +29,14 @@ const Footer = () => {
   };
   const closePopUp = () => {
     setIsOpenPopup(false);
-    console.log("close popup");
   };
 
   const onSendNewSletterEmail = async () => {
+    setTimeout(() => {
+      console.log("After sending email");
+      setIsEmailEmpty(false);
+      setIsEmailFormat(true);
+    }, 2000);
     if (validateInput(newsletterEmail) === false) {
       setIsEmailEmpty(true);
       setIsEmailFormat(true);
@@ -75,6 +79,7 @@ const Footer = () => {
     FB_SERVICES.getCompanyInformation(languageTypeValue).then((footerInfo) =>
       setFooterInfo(footerInfo)
     );
+   
   }, [languageTypeValue]);
 
   const renderCompanyLogoName = () => {

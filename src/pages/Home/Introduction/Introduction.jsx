@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import * as FB_SERVICES from "../../../FirebaseServices/FirebaseService";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from "../../../Context/LanguageContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Introduction.css";
+
+AOS.init();
 
 const Introduction = () => {
   const { t, i18n } = useTranslation("translation");
@@ -30,9 +34,7 @@ const Introduction = () => {
             </span>
             <RiDoubleQuotesR className="double-quotes__icon" />
           </span>
-          <span className="info-content">
-            {introduction.intro_description}
-          </span>
+          <span className="info-content">{introduction.intro_description}</span>
 
           <div className="link-button__group">
             <Link className="link-about__button" to="/">
@@ -46,8 +48,17 @@ const Introduction = () => {
         </div>
 
         <div className="info-right__box">
-          <div className="background-box" />
-          <img alt="" className="info-image" src={introduction.intro_image} />
+          <div
+            className="background-box"
+            data-aos="fade-left"
+            data-aos-delay="500"
+          />
+          <img
+            alt=""
+            className="info-image"
+            src={introduction.intro_image}
+            data-aos="fade-up"
+          />
         </div>
       </div>
       <div className="info-bottom__box">
